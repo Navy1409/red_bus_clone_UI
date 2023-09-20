@@ -28,7 +28,7 @@ class accState extends State<acc> {
               child: Column(
                 children: [
                   Card(
-                      margin: EdgeInsets.only(left: 10, right: 10, top: 5),
+                      margin: EdgeInsets.only(left: 10, right: 10, top: 15),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -72,7 +72,24 @@ class accState extends State<acc> {
                       ),
                   ),
                   SizedBox(
-                    height: 10.0,
+                    height: 15.0,
+                  ),
+                  Card(
+                    margin: EdgeInsets.only(left: 10, right: 10, top: 1),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Container(
+                          margin: EdgeInsets.only(left: 10),
+                          child: Text(
+                            'Verify your mobile no.',
+                            style: TextStyle(fontSize: 18),
+                          ),
+                        ),
+                        IconButton(
+                            onPressed: () {}, icon: Icon(Icons.arrow_forward_ios)),
+                      ],
+                    ),
                   ),
                   Card(
                     margin: EdgeInsets.only(left: 10, right: 10, top: 1),
@@ -126,14 +143,14 @@ class accState extends State<acc> {
                     ),
                   ),
                   Card(
-                    margin: EdgeInsets.only(left: 10, right: 10, top: 5),
+                    margin: EdgeInsets.only(left: 10, right: 10, top: 1),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Container(
                           margin: EdgeInsets.only(left: 10),
                           child: Text(
-                            'Track Your Order',
+                            'Co-Passenger (Bus)',
                             style: TextStyle(fontSize: 18),
                           ),
                         ),
@@ -143,14 +160,14 @@ class accState extends State<acc> {
                     ),
                   ),
                   Card(
-                    margin: EdgeInsets.only(left: 10, right: 10, top: 5),
+                    margin: EdgeInsets.only(left: 10, right: 10, top: 1),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Container(
                           margin: EdgeInsets.only(left: 10),
                           child: Text(
-                            'Track Your Order',
+                            'Trending Videos',
                             style: TextStyle(fontSize: 18),
                           ),
                         ),
@@ -160,14 +177,14 @@ class accState extends State<acc> {
                     ),
                   ),
                   Card(
-                    margin: EdgeInsets.only(left: 10, right: 10, top: 5),
+                    margin: EdgeInsets.only(left: 10, right: 10, top: 1),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Container(
                           margin: EdgeInsets.only(left: 10),
                           child: Text(
-                            'Track Your Order',
+                            'Refer & Earn',
                             style: TextStyle(fontSize: 18),
                           ),
                         ),
@@ -177,14 +194,14 @@ class accState extends State<acc> {
                     ),
                   ),
                   Card(
-                    margin: EdgeInsets.only(left: 10, right: 10, top: 5),
+                    margin: EdgeInsets.only(left: 10, right: 10, top: 1),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Container(
                           margin: EdgeInsets.only(left: 10),
                           child: Text(
-                            'Track Your Order',
+                            'Offers',
                             style: TextStyle(fontSize: 18),
                           ),
                         ),
@@ -194,14 +211,14 @@ class accState extends State<acc> {
                     ),
                   ),
                   Card(
-                    margin: EdgeInsets.only(left: 10, right: 10, top: 5),
+                    margin: EdgeInsets.only(left: 10, right: 10, top: 1),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Container(
                           margin: EdgeInsets.only(left: 10),
                           child: Text(
-                            'Track Your Order',
+                            'Help',
                             style: TextStyle(fontSize: 18),
                           ),
                         ),
@@ -211,14 +228,14 @@ class accState extends State<acc> {
                     ),
                   ),
                   Card(
-                    margin: EdgeInsets.only(left: 10, right: 10, top: 5),
+                    margin: EdgeInsets.only(left: 10, right: 10, top: 1),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Container(
                           margin: EdgeInsets.only(left: 10),
                           child: Text(
-                            'Track Your Order',
+                            'Call Support',
                             style: TextStyle(fontSize: 18),
                           ),
                         ),
@@ -228,14 +245,14 @@ class accState extends State<acc> {
                     ),
                   ),
                   Card(
-                    margin: EdgeInsets.only(left: 10, right: 10, top: 5),
+                    margin: EdgeInsets.only(left: 10, right: 10, top: 1),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Container(
                           margin: EdgeInsets.only(left: 10),
                           child: Text(
-                            'Track Your Order',
+                            'About Us',
                             style: TextStyle(fontSize: 18),
                           ),
                         ),
@@ -245,14 +262,14 @@ class accState extends State<acc> {
                     ),
                   ),
                   Card(
-                    margin: EdgeInsets.only(left: 10, right: 10, top: 5),
+                    margin: EdgeInsets.only(left: 10, right: 10, top: 1),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Container(
                           margin: EdgeInsets.only(left: 10),
                           child: Text(
-                            'Track Your Order',
+                            'Settings',
                             style: TextStyle(fontSize: 18),
                           ),
                         ),
@@ -262,14 +279,14 @@ class accState extends State<acc> {
                     ),
                   ),
                   Card(
-                    margin: EdgeInsets.only(left: 10, right: 10, top: 5),
+                    margin: EdgeInsets.only(left: 10, right: 10, top: 1),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Container(
                           margin: EdgeInsets.only(left: 10),
                           child: Text(
-                            'Track Your Order',
+                            'Feedback',
                             style: TextStyle(fontSize: 18),
                           ),
                         ),
@@ -279,19 +296,17 @@ class accState extends State<acc> {
                     ),
                   ),
                   Card(
-                    margin: EdgeInsets.only(left: 10, right: 10, top: 5),
+                    margin: EdgeInsets.only(left: 10, right: 10, top: 15),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Container(
-                          margin: EdgeInsets.only(left: 10),
+                          margin: EdgeInsets.only(left: 10, top: 20, bottom: 20),
                           child: Text(
-                            'Track Your Order',
+                            'Logout',
                             style: TextStyle(fontSize: 18),
                           ),
                         ),
-                        IconButton(
-                            onPressed: () {}, icon: Icon(Icons.arrow_forward_ios)),
                       ],
                     ),
                   ),
