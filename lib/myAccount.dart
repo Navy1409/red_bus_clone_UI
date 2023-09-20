@@ -32,30 +32,57 @@ class accState extends State<acc> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          CircleAvatar(
-                            radius: 20.0,
-                          ),
-                          Container(
-                            margin: EdgeInsets.only(left: 10),
-                            child: Text(
-                              'Track Your Order',
-                              style: TextStyle(fontSize: 18),
-                            ),
+                          Row(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: CircleAvatar(
+                                  radius: 30.0,
+                                ),
+                              ),
+                              SizedBox(width: 15,),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Male',
+                                    style: TextStyle(fontSize: 18),
+                                  ),
+                                  SizedBox(
+                                    height: 3.0,
+                                  ),
+                                  Text(
+                                    '8765432198',
+                                    style: TextStyle(fontSize: 18),
+                                  ),
+                                  SizedBox(
+                                    height: 3.0,
+                                  ),
+                                  Text(
+                                    'nav@gmail.com',
+                                    style: TextStyle(fontSize: 18),
+                                  ),
+                                ],
+                              ),
+                            ],
                           ),
                           IconButton(
                               onPressed: () {}, icon: Icon(Icons.arrow_forward_ios)),
                         ],
                       ),
                   ),
+                  SizedBox(
+                    height: 10.0,
+                  ),
                   Card(
-                    margin: EdgeInsets.only(left: 10, right: 10, top: 5),
+                    margin: EdgeInsets.only(left: 10, right: 10, top: 1),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Container(
                           margin: EdgeInsets.only(left: 10),
                           child: Text(
-                            'Track Your Order',
+                            'My Bookings',
                             style: TextStyle(fontSize: 18),
                           ),
                         ),
@@ -65,14 +92,14 @@ class accState extends State<acc> {
                     ),
                   ),
                   Card(
-                    margin: EdgeInsets.only(left: 10, right: 10, top: 5),
+                    margin: EdgeInsets.only(left: 10, right: 10, top: 1),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Container(
                           margin: EdgeInsets.only(left: 10),
                           child: Text(
-                            'Track Your Order',
+                            'Wallet',
                             style: TextStyle(fontSize: 18),
                           ),
                         ),
@@ -82,14 +109,14 @@ class accState extends State<acc> {
                     ),
                   ),
                   Card(
-                    margin: EdgeInsets.only(left: 10, right: 10, top: 5),
+                    margin: EdgeInsets.only(left: 10, right: 10, top: 1),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Container(
                           margin: EdgeInsets.only(left: 10),
                           child: Text(
-                            'Track Your Order',
+                            'Cards',
                             style: TextStyle(fontSize: 18),
                           ),
                         ),
