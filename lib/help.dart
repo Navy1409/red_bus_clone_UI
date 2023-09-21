@@ -9,8 +9,11 @@ class help extends StatefulWidget {
 class helpState extends State<help> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Text("helooo"),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: Text("helooo"),
+      ),
     ) ;
   }
 }

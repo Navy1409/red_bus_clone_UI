@@ -9,8 +9,11 @@ class home extends StatefulWidget {
 class homeState extends State<home> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Text("hiii"),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: Text("hiii"),
+      ),
     );
   }
 }
