@@ -14,7 +14,7 @@ class _rYdebState extends State<rYdeb> {
       Tab(text: 'Completed Trips'),
       Tab(text: 'Cancelled Trips'),
     ],
-    labelColor: Colors.black,
+    labelColor: Colors.grey.shade600,
     unselectedLabelColor: Colors.redAccent,
   );
   Widget build(BuildContext context) {
@@ -23,6 +23,7 @@ class _rYdebState extends State<rYdeb> {
       home: DefaultTabController(
         length: 3,
         child: Scaffold(
+          backgroundColor: Colors.white,
           appBar: AppBar(
             backgroundColor: Colors.white,
             bottom: PreferredSize(
@@ -35,12 +36,12 @@ class _rYdebState extends State<rYdeb> {
           ),
           body:
           TabBarView(children:[
-            Text('No completed trips'),
-            Text('No completed trips'),
-            Text('No completed trips'),
+            Image.asset("images/image2.jpg",alignment: Alignment.topCenter,),
+            Image.asset("images/image1.jpg",alignment: Alignment.topCenter,),
+            Image.asset("images/image3.jpg",alignment: Alignment.topCenter,),
           ],
-
           ),
+
         ),
       ),
     );
