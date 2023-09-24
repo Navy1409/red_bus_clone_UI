@@ -196,62 +196,127 @@ class homeState extends State<home> {
                           ],
                         ),
                         SizedBox(
-                          height: 10,
+                          height: 15,
                         ),
                         SingleChildScrollView(
                           scrollDirection: Axis.horizontal,
                           child: Container(
                             child: Row(
                               children: [
-                                Card(
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Text("1"),
-                                      Text("Lucknow"),
-                                      Text("From Rs. 449")
-                                    ],
-                                  ),
+                                Stack(
+                                  children:<Widget>[
+                                        Container(
+                                          width: 150,
+                                          height: 150,
+                                          color: Colors.white,
+                                          child: Card(
+                                            child: Container(
+                                              margin: EdgeInsets.only(left: 10),
+                                              child: Column(
+                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                children: [
+                                                  Image.asset("images/td1.jpg", height: 100,width: 100,),
+                                                  Flexible(child: Text("Lucknow", style: TextStyle(fontWeight: FontWeight.bold,
+                                                      color: Colors.black, fontSize: 20),)),
+                                                  Flexible(child: Text("From Rs. 449", style: TextStyle(color: Colors.grey.shade600),))
+                                                ],
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                  ]
                                 ),
-                                Card(
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Text("1"),
-                                      Text("Lucknow"),
-                                      Text("From Rs. 449")
-                                    ],
-                                  ),
+                                Stack(
+                                    children:<Widget>[
+                                      Container(
+                                        width: 150,
+                                        height: 150,
+                                        color: Colors.white,
+                                        child: Card(
+                                          child: Container(
+                                            margin: EdgeInsets.only(left: 10),
+                                            child: Column(
+                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              children: [
+                                                Image.asset("images/td2.jpg", height: 100,width: 100,),
+                                                Flexible(child: Text("Jaipur", style: TextStyle(fontWeight: FontWeight.bold,
+                                                    color: Colors.black, fontSize: 20),)),
+                                                Flexible(child: Text("From Rs. 192", style: TextStyle(color: Colors.grey.shade600),))
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ]
                                 ),
-                                Card(
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Text("1"),
-                                      Text("Lucknow"),
-                                      Text("From Rs. 449")
-                                    ],
-                                  ),
+                                Stack(
+                                    children:<Widget>[
+                                      Container(
+                                        width: 150,
+                                        height: 150,
+                                        color: Colors.white,
+                                        child: Card(
+                                          child: Container(
+                                            margin: EdgeInsets.only(left: 10),
+                                            child: Column(
+                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              children: [
+                                                Image.asset("images/td3.jpg", height: 100,width: 100,),
+                                                Flexible(child: Text("Gorakhpur", style: TextStyle(fontWeight: FontWeight.bold,
+                                                    color: Colors.black, fontSize: 20),)),
+                                                Flexible(child: Text("From Rs. 499", style: TextStyle(color: Colors.grey.shade600),))
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ]
                                 ),
-                                Card(
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Text("1"),
-                                      Text("Lucknow"),
-                                      Text("From Rs. 449")
-                                    ],
-                                  ),
+                                Stack(
+                                    children:<Widget>[
+                                      Container(
+                                        width: 150,
+                                        height: 150,
+                                        color: Colors.pink,
+                                        child: Card(
+                                          child: Container(
+                                            margin: EdgeInsets.only(left: 10),
+                                            child: Column(
+                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              children: [
+                                                Image.asset("images/td4.jpg", height: 100,width: 100,),
+                                                Flexible(child: Text("Dehradun", style: TextStyle(fontWeight: FontWeight.bold,
+                                                    color: Colors.black, fontSize: 20),)),
+                                                Flexible(child: Text("From Rs. 13", style: TextStyle(color: Colors.grey.shade600),))
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ]
                                 ),
-                                Card(
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Text("1"),
-                                      Text("Lucknow"),
-                                      Text("From Rs. 449")
-                                    ],
-                                  ),
+                                Stack(
+                                    children:<Widget>[
+                                      Container(
+                                        width: 150,
+                                        height: 150,
+                                        color: Colors.white,
+                                        child: Card(
+                                          child: Container(
+                                            margin: EdgeInsets.only(left: 10),
+                                            child: Column(
+                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              children: [
+                                                Image.asset("images/td5.jpg", height: 100,width: 100,),
+                                                Flexible(child: Text("Chandigarh", style: TextStyle(fontWeight: FontWeight.bold,
+                                                    color: Colors.black, fontSize: 20),)),
+                                                Flexible(child: Text("From Rs. 250", style: TextStyle(color: Colors.grey.shade600),))
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ]
                                 ),
                               ],
                             ),
