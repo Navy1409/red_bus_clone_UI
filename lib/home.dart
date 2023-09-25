@@ -1,6 +1,11 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:red_bus_clone/busticket.dart';
 import 'dart:math'as math;
+
+import 'search.dart';
+import 'package:red_bus_clone/trainticket.dart';
 class home extends StatefulWidget {
   const home({Key? key}) : super(key: key);
 
@@ -32,9 +37,10 @@ class homeState extends State<home> {
                           child:
                           TextButton(
                             onPressed: (){
-                              Border(
-                                bottom: BorderSide(color: Colors.red, width: 3),
-                              );
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => BusTicket()));
                             },
                             child:
                             Image.asset('images/image7.jpg',
@@ -54,7 +60,12 @@ class homeState extends State<home> {
                       Flexible(
                           child:
                           TextButton(
-                            onPressed: (){},
+                            onPressed: (){
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => TrainTicket()));
+                            },
                             child: Image.asset('images/image9.jpg',
                               width: 110,
                             ),
@@ -106,7 +117,12 @@ class homeState extends State<home> {
                                   Container(
                                     padding: EdgeInsets.all(8),
                                     child: InkWell(
-                                      onTap: () {},
+                                      onTap: () {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) => Searchfeild()));
+                                      },
                                       child: Row(
                                         children: [
                                           Icon(Icons.directions_bus_outlined),
@@ -127,7 +143,10 @@ class homeState extends State<home> {
                                   Container(
                                     padding: EdgeInsets.all(8),
                                     child: InkWell(
-                                      onTap: () {},
+                                      onTap: () {Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) => Searchfeild()));},
                                       child: Row(
                                         children: [
                                           Icon(Icons.directions_bus_outlined),
@@ -315,7 +334,7 @@ class homeState extends State<home> {
                               children: [
                                 Row(
                                   children: [
-                                    Image.asset("images/image2.jpg", height: 100,width:100,),
+                                    Image.asset("images/RateUs.jpg", height: 100,width:100,),
                                     Flexible(
                                       child: Column(
                                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -397,9 +416,10 @@ class homeState extends State<home> {
                                         Container(
                                           width: 150,
                                           height: 150,
-                                          color: Colors.grey.shade100,
+                                          color: Colors.white,
                                           child: Card(
                                             child: Container(
+                                              color: Colors.white70,
                                               margin: EdgeInsets.only(left: 10),
                                               child: Column(
                                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -420,9 +440,10 @@ class homeState extends State<home> {
                                       Container(
                                         width: 150,
                                         height: 150,
-                                        color: Colors.grey.shade100,
+                                        color: Colors.white,
                                         child: Card(
                                           child: Container(
+                                            color: Colors.white70,
                                             margin: EdgeInsets.only(left: 10),
                                             child: Column(
                                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -443,9 +464,10 @@ class homeState extends State<home> {
                                       Container(
                                         width: 150,
                                         height: 150,
-                                        color: Colors.grey.shade100,
+                                        color: Colors.white,
                                         child: Card(
                                           child: Container(
+                                            color: Colors.white70,
                                             margin: EdgeInsets.only(left: 10),
                                             child: Column(
                                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -466,9 +488,10 @@ class homeState extends State<home> {
                                       Container(
                                         width: 150,
                                         height: 150,
-                                        color: Colors.grey.shade100,
+                                        color: Colors.white,
                                         child: Card(
                                           child: Container(
+                                            color: Colors.white70,
                                             margin: EdgeInsets.only(left: 10),
                                             child: Column(
                                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -489,9 +512,10 @@ class homeState extends State<home> {
                                       Container(
                                         width: 150,
                                         height: 150,
-                                        color: Colors.grey.shade100,
+                                        color: Colors.white,
                                         child: Card(
                                           child: Container(
+                                            color: Colors.grey.shade100,
                                             margin: EdgeInsets.only(left: 10),
                                             child: Column(
                                               crossAxisAlignment: CrossAxisAlignment.start,
@@ -512,91 +536,7 @@ class homeState extends State<home> {
                           ),
                         ),
                         SizedBox(
-                          height: 50,
-                        ),
-                        Container(
-                          alignment: Alignment.centerLeft,
-                          child: Text("Government Buses",
-                            style: TextStyle(fontSize: 25, color: Colors.black, fontWeight: FontWeight.bold),),
-                        ),
-                        SizedBox(
-                          height: 50,
-                        ),
-                        Card(
-                          shadowColor: Colors.grey,
-                          child: Column(
-                            children: [
-                              SizedBox(
-                                height:60,
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Padding(
-                                      padding: EdgeInsets.all(8.0),
-                                      child: CircleAvatar(
-                                        radius: 15.0,
-                                      ),
-                                    ),
-                                    SizedBox(width:3,),
-                                    Column(
-                                      crossAxisAlignment: CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          'APSRTC',
-                                          style: TextStyle(fontSize: 18),
-                                        ),
-                                        SizedBox(
-                                          height: 3.0,
-                                        ),
-                                        Text(
-                                          'HJGFYJGJHKJHKJH',
-                                          style: TextStyle(fontSize: 18),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              Divider(
-                                color: Colors.grey.shade200,
-                              ),
-                              Container(
-                                margin: EdgeInsets.symmetric(horizontal: 30),
-                                height: 200,
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                                  children: [
-                                    Text("1539 services including Garuda, Garuda Plus and more", style:
-                                    TextStyle(color: Colors.grey.shade800, fontSize: 20),),
-                                    SizedBox(
-                                      height: 30,
-                                    ),
-                                    Card(
-                                      elevation: 0,
-                                      color: Colors.blueGrey.shade200,
-                                      child: Container(
-                                        decoration: BoxDecoration(
-                                          borderRadius: BorderRadius.circular(4000),
-                                        ),
-                                        height: 30,
-                                        child: Row(
-                                          mainAxisAlignment: MainAxisAlignment.center,
-                                          children: [
-                                              Flexible(child: Image.asset("images/image9.jpg")),
-                                              SizedBox(width: 30,),
-                                              Text("Official booking partner of APSRTC",
-                                                  style: TextStyle(color: Colors.black, fontSize: 15)
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                      )
-                                    ],
-                                    ),
-                              ),
-                            ],
-                          ),
+                          height: 30,
                         ),
                         SizedBox(
                           height: 20,
@@ -712,6 +652,1001 @@ class homeState extends State<home> {
                             ),
                           ],
                         ),
+                        SizedBox(height: 20,),
+                        Visibility(
+                          visible: _isPresseda,
+                          child: CarouselSlider(
+                            items: [
+                              //1st Image of Slider
+                              Container(
+                                margin: EdgeInsets.all(6.0),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(8.0),
+                                ),
+                                child: Card(
+                                  child: Container(
+                                    margin: EdgeInsets.symmetric(horizontal: 20),
+                                    child: Row(
+                                      children: [
+                                        Image.asset("images/c6.jpg",
+                                        height: 80,width: 80,),
+                                        SizedBox(width: 20,),
+                                        Column(
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Container(
+                                              alignment: Alignment.centerLeft,
+                                              height: 30,
+                                              color: Colors.blueAccent,
+                                              padding: EdgeInsets.symmetric(horizontal: 10),
+                                              child: Text("BUS", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),),
+                                            ),
+                                            Flexible(
+                                              child: Text("Save upto Rs 250 on bus....",
+                                                style: TextStyle(color: Colors.black,
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 17),
+                                                overflow: TextOverflow.fade,),
+                                            ),
+                                            Text("Valid till: 30 Sep", style: TextStyle(color: Colors.grey.shade500,
+                                                fontSize: 15),),
+                                            TextButton(onPressed: (){}, child: Text("FIRST", style: TextStyle(color: Colors.black),),
+                                              style: TextButton.styleFrom(
+                                                  backgroundColor: Colors.red.shade100
+                                              ),),
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                margin: EdgeInsets.all(6.0),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(8.0),
+                                ),
+                                child: Card(
+                                  child: Container(
+                                    margin: EdgeInsets.symmetric(horizontal: 20),
+                                    child: Row(
+                                      children: [
+                                        Image.asset("images/c25.jpg",height: 80,width: 80,),
+                                        SizedBox(width: 20,),
+                                        Column(
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Container(
+                                              alignment: Alignment.centerLeft,
+                                              height: 30,
+                                              color: Colors.blueAccent,
+                                              padding: EdgeInsets.symmetric(horizontal: 10),
+                                              child: Text("BUS", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),),
+                                            ),
+                                            Flexible(
+                                              child: Text("Save upto Rs 250 on MH....",
+                                                style: TextStyle(color: Colors.black,
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 17),
+                                                overflow: TextOverflow.fade,),
+                                            ),
+                                            Text("Valid till: 30 Sep", style: TextStyle(color: Colors.grey.shade500,
+                                                fontSize: 15),),
+                                            TextButton(onPressed: (){}, child: Text("BUS300", style: TextStyle(color: Colors.black),),
+                                              style: TextButton.styleFrom(
+                                                  backgroundColor: Colors.red.shade100
+                                              ),),
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                margin: EdgeInsets.all(6.0),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(8.0),
+                                ),
+                                child: Card(
+                                  child: Container(
+                                    margin: EdgeInsets.symmetric(horizontal: 20),
+                                    child: Row(
+                                      children: [
+                                        Image.asset("images/c1.jpg",height: 80,width: 80,),
+                                        SizedBox(width: 20,),
+                                        Column(
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Container(
+                                              alignment: Alignment.centerLeft,
+                                              height: 30,
+                                              color: Colors.blueAccent,
+                                              padding: EdgeInsets.symmetric(horizontal: 10),
+                                              child: Text("BUS", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),),
+                                            ),
+                                            Flexible(
+                                              child: Text("10% instant discount....",
+                                                style: TextStyle(color: Colors.black,
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 17),
+                                                overflow: TextOverflow.fade,),
+                                            ),
+                                            Text("Valid till: 30 Sep", style: TextStyle(color: Colors.grey.shade500,
+                                                fontSize: 15),),
+                                            TextButton(onPressed: (){}, child: Text("SIMPLEFEST", style: TextStyle(color: Colors.black),),
+                                              style: TextButton.styleFrom(
+                                                  backgroundColor: Colors.red.shade100
+                                              ),),
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                margin: EdgeInsets.all(6.0),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(8.0),
+                                ),
+                                child: Card(
+                                  child: Container(
+                                    margin: EdgeInsets.symmetric(horizontal: 20),
+                                    child: Row(
+                                      children: [
+                                        Image.asset("images/c16.jpg",height: 80,width: 80,),
+                                        SizedBox(width: 20,),
+                                        Column(
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Container(
+                                              alignment: Alignment.centerLeft,
+                                              height: 30,
+                                              color: Colors.blueAccent,
+                                              padding: EdgeInsets.symmetric(horizontal: 10),
+                                              child: Text("BUS", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),),
+                                            ),
+                                            Flexible(
+                                              child: Text("Save upto Rs 250 on bus....",
+                                                style: TextStyle(color: Colors.black,
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 17),
+                                                overflow: TextOverflow.fade,),
+                                            ),
+                                            Text("Valid till: 30 Sep", style: TextStyle(color: Colors.grey.shade500,
+                                                fontSize: 15),),
+                                            TextButton(onPressed: (){}, child: Text("APSRTCNEW", style: TextStyle(color: Colors.black),),
+                                              style: TextButton.styleFrom(
+                                                  backgroundColor: Colors.red.shade100
+                                              ),),
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                margin: EdgeInsets.all(6.0),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(8.0),
+                                ),
+                                child: Card(
+                                  child: Container(
+                                    margin: EdgeInsets.symmetric(horizontal: 20),
+                                    child: Row(
+                                      children: [
+                                        Image.asset("images/c22.jpg",height: 80,width: 80,),
+                                        SizedBox(width: 20,),
+                                        Column(
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Container(
+                                              alignment: Alignment.centerLeft,
+                                              height: 30,
+                                              color: Colors.blueAccent,
+                                              padding: EdgeInsets.symmetric(horizontal: 10),
+                                              child: Text("RAILS", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),),
+                                            ),
+                                            Flexible(
+                                              child: Text("Save upto Rs 150 on trai....",
+                                                style: TextStyle(color: Colors.black,
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 17),
+                                                overflow: TextOverflow.fade,),
+                                            ),
+                                            Text("Valid till: 30 Sep", style: TextStyle(color: Colors.grey.shade500,
+                                                fontSize: 15),),
+                                            TextButton(onPressed: (){}, child: Text("RBRAIL", style: TextStyle(color: Colors.black),),
+                                              style: TextButton.styleFrom(
+                                                  backgroundColor: Colors.red.shade100
+                                              ),),
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                margin: EdgeInsets.all(6.0),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(8.0),
+                                ),
+                                child: Card(
+                                  child: Container(
+                                    margin: EdgeInsets.symmetric(horizontal: 20),
+                                    child: Row(
+                                      children: [
+                                        Image.asset("images/c24.jpg",height: 80,width: 80,),
+                                        SizedBox(width: 20,),
+                                        Column(
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Container(
+                                              alignment: Alignment.centerLeft,
+                                              height: 30,
+                                              color: Colors.blueAccent,
+                                              padding: EdgeInsets.symmetric(horizontal: 10),
+                                              child: Text("RYDE", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),),
+                                            ),
+                                            Flexible(
+                                              child: Text("Get Rs 200 off....",
+                                                style: TextStyle(color: Colors.black,
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 17),
+                                                overflow: TextOverflow.fade,),
+                                            ),
+                                            Text("Valid till: 31 Dec", style: TextStyle(color: Colors.grey.shade500,
+                                                fontSize: 15),),
+                                            TextButton(onPressed: (){}, child: Text("INSTANT200", style: TextStyle(color: Colors.black),),
+                                              style: TextButton.styleFrom(
+                                                  backgroundColor: Colors.red.shade100
+                                              ),),
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                margin: EdgeInsets.all(6.0),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(8.0),
+                                ),
+                                child: Card(
+                                  child: Container(
+                                    margin: EdgeInsets.symmetric(horizontal: 20),
+                                    child: Row(
+                                      children: [
+                                        Image.asset("images/c18.jpg",height: 80,width: 80,),
+                                        SizedBox(width: 20,),
+                                        Column(
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Container(
+                                              alignment: Alignment.centerLeft,
+                                              height: 30,
+                                              color: Colors.blueAccent,
+                                              padding: EdgeInsets.symmetric(horizontal: 10),
+                                              child: Text("BUS", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),),
+                                            ),
+                                            Flexible(
+                                              child: Text("Save upto Rs 250 on....",
+                                                style: TextStyle(color: Colors.black,
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 17),
+                                                overflow: TextOverflow.fade,),
+                                            ),
+                                            Text("Valid till: 30 Sep", style: TextStyle(color: Colors.grey.shade500,
+                                                fontSize: 15),),
+                                            TextButton(onPressed: (){}, child: Text("TSRTC", style: TextStyle(color: Colors.black),),
+                                              style: TextButton.styleFrom(
+                                                  backgroundColor: Colors.red.shade100
+                                              ),),
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                margin: EdgeInsets.all(6.0),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(8.0),
+                                ),
+                                child: Card(
+                                  child: Container(
+                                    margin: EdgeInsets.symmetric(horizontal: 20),
+                                    child: Row(
+                                      children: [
+                                        Image.asset("images/c23.jpg",height: 80,width: 80,),
+                                        SizedBox(width: 20,),
+                                        Column(
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Container(
+                                              alignment: Alignment.centerLeft,
+                                              height: 30,
+                                              color: Colors.blueAccent,
+                                              padding: EdgeInsets.symmetric(horizontal: 10),
+                                              child: Text("RAILS", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),),
+                                            ),
+                                            Flexible(
+                                              child: Text("Zero Convi....",
+                                                style: TextStyle(color: Colors.black,
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 17),
+                                                overflow: TextOverflow.fade,),
+                                            ),
+                                            Text("Valid till: 30 Sep", style: TextStyle(color: Colors.grey.shade500,
+                                                fontSize: 15),),
+                                            TextButton(onPressed: (){}, child: Text("NOFEE", style: TextStyle(color: Colors.black),),
+                                              style: TextButton.styleFrom(
+                                                  backgroundColor: Colors.red.shade100
+                                              ),),
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                margin: EdgeInsets.all(6.0),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(8.0),
+                                ),
+                                child: Card(
+                                  child: Container(
+                                    margin: EdgeInsets.symmetric(horizontal: 20),
+                                    child: Row(
+                                      children: [
+                                        Image.asset("images/c22.jpg",height: 80,width: 80,),
+                                        SizedBox(width: 20,),
+                                        Column(
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Container(
+                                              alignment: Alignment.centerLeft,
+                                              height: 30,
+                                              color: Colors.blueAccent,
+                                              padding: EdgeInsets.symmetric(horizontal: 10),
+                                              child: Text("RAILS", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),),
+                                            ),
+                                            Flexible(
+                                              child: Text("Save upto Rs 80 on TRA....",
+                                                style: TextStyle(color: Colors.black,
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 17),
+                                                overflow: TextOverflow.fade,),
+                                            ),
+                                            Text("Valid till: 30 Sep", style: TextStyle(color: Colors.grey.shade500,
+                                                fontSize: 15),),
+                                            TextButton(onPressed: (){}, child: Text("SUPERB80", style: TextStyle(color: Colors.black),),
+                                              style: TextButton.styleFrom(
+                                                  backgroundColor: Colors.red.shade100
+                                              ),),
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+
+                            ],
+                            //Slider Container properties
+                            options: CarouselOptions(
+                              height: 180.0,
+                              enlargeCenterPage: true,
+                              autoPlay: true,
+                              aspectRatio: 16 / 2,
+                              autoPlayCurve: Curves.fastOutSlowIn,
+                              enableInfiniteScroll: true,
+                              autoPlayAnimationDuration: Duration(milliseconds: 200),
+                              viewportFraction: 0.9,
+                            ),
+                          ),
+                        ),
+                        Visibility(
+                          visible: _isPressedb,
+                          child: CarouselSlider(
+                            items: [
+                              //1st Image of Slider
+                              Container(
+                                margin: EdgeInsets.all(6.0),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(8.0),
+                                ),
+                                child: Card(
+                                  child: Container(
+                                    margin: EdgeInsets.symmetric(horizontal: 20),
+                                    child: Row(
+                                      children: [
+                                        Image.asset("images/c6.jpg",
+                                          height: 80,width: 80,),
+                                        SizedBox(width: 20,),
+                                        Column(
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Container(
+                                              alignment: Alignment.centerLeft,
+                                              height: 30,
+                                              color: Colors.blueAccent,
+                                              padding: EdgeInsets.symmetric(horizontal: 10),
+                                              child: Text("BUS", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),),
+                                            ),
+                                            Flexible(
+                                              child: Text("Save upto Rs 250 on bus....",
+                                                style: TextStyle(color: Colors.black,
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 17),
+                                                overflow: TextOverflow.fade,),
+                                            ),
+                                            Text("Valid till: 30 Sep", style: TextStyle(color: Colors.grey.shade500,
+                                                fontSize: 15),),
+                                            TextButton(onPressed: (){}, child: Text("FIRST", style: TextStyle(color: Colors.black),),
+                                              style: TextButton.styleFrom(
+                                                  backgroundColor: Colors.red.shade100
+                                              ),),
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                margin: EdgeInsets.all(6.0),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(8.0),
+                                ),
+                                child: Card(
+                                  child: Container(
+                                    margin: EdgeInsets.symmetric(horizontal: 20),
+                                    child: Row(
+                                      children: [
+                                        Image.asset("images/c25.jpg",height: 80,width: 80,),
+                                        SizedBox(width: 20,),
+                                        Column(
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Container(
+                                              alignment: Alignment.centerLeft,
+                                              height: 30,
+                                              color: Colors.blueAccent,
+                                              padding: EdgeInsets.symmetric(horizontal: 10),
+                                              child: Text("BUS", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),),
+                                            ),
+                                            Flexible(
+                                              child: Text("Save upto Rs 250 on MH....",
+                                                style: TextStyle(color: Colors.black,
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 17),
+                                                overflow: TextOverflow.fade,),
+                                            ),
+                                            Text("Valid till: 30 Sep", style: TextStyle(color: Colors.grey.shade500,
+                                                fontSize: 15),),
+                                            TextButton(onPressed: (){}, child: Text("BUS300", style: TextStyle(color: Colors.black),),
+                                              style: TextButton.styleFrom(
+                                                  backgroundColor: Colors.red.shade100
+                                              ),),
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                margin: EdgeInsets.all(6.0),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(8.0),
+                                ),
+                                child: Card(
+                                  child: Container(
+                                    margin: EdgeInsets.symmetric(horizontal: 20),
+                                    child: Row(
+                                      children: [
+                                        Image.asset("images/c1.jpg",height: 80,width: 80,),
+                                        SizedBox(width: 20,),
+                                        Column(
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Container(
+                                              alignment: Alignment.centerLeft,
+                                              height: 30,
+                                              color: Colors.blueAccent,
+                                              padding: EdgeInsets.symmetric(horizontal: 10),
+                                              child: Text("BUS", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),),
+                                            ),
+                                            Flexible(
+                                              child: Text("10% instant discount....",
+                                                style: TextStyle(color: Colors.black,
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 17),
+                                                overflow: TextOverflow.fade,),
+                                            ),
+                                            Text("Valid till: 30 Sep", style: TextStyle(color: Colors.grey.shade500,
+                                                fontSize: 15),),
+                                            TextButton(onPressed: (){}, child: Text("SIMPLEFEST", style: TextStyle(color: Colors.black),),
+                                              style: TextButton.styleFrom(
+                                                  backgroundColor: Colors.red.shade100
+                                              ),),
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                margin: EdgeInsets.all(6.0),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(8.0),
+                                ),
+                                child: Card(
+                                  child: Container(
+                                    margin: EdgeInsets.symmetric(horizontal: 20),
+                                    child: Row(
+                                      children: [
+                                        Image.asset("images/c16.jpg",height: 80,width: 80,),
+                                        SizedBox(width: 20,),
+                                        Column(
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Container(
+                                              alignment: Alignment.centerLeft,
+                                              height: 30,
+                                              color: Colors.blueAccent,
+                                              padding: EdgeInsets.symmetric(horizontal: 10),
+                                              child: Text("BUS", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),),
+                                            ),
+                                            Flexible(
+                                              child: Text("Save upto Rs 250 on bus....",
+                                                style: TextStyle(color: Colors.black,
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 17),
+                                                overflow: TextOverflow.fade,),
+                                            ),
+                                            Text("Valid till: 30 Sep", style: TextStyle(color: Colors.grey.shade500,
+                                                fontSize: 15),),
+                                            TextButton(onPressed: (){}, child: Text("APSRTCNEW", style: TextStyle(color: Colors.black),),
+                                              style: TextButton.styleFrom(
+                                                  backgroundColor: Colors.red.shade100
+                                              ),),
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                margin: EdgeInsets.all(6.0),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(8.0),
+                                ),
+                                child: Card(
+                                  child: Container(
+                                    margin: EdgeInsets.symmetric(horizontal: 20),
+                                    child: Row(
+                                      children: [
+                                        Image.asset("images/c18.jpg",height: 80,width: 80,),
+                                        SizedBox(width: 20,),
+                                        Column(
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Container(
+                                              alignment: Alignment.centerLeft,
+                                              height: 30,
+                                              color: Colors.blueAccent,
+                                              padding: EdgeInsets.symmetric(horizontal: 10),
+                                              child: Text("BUS", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),),
+                                            ),
+                                            Flexible(
+                                              child: Text("Save upto Rs 250 on....",
+                                                style: TextStyle(color: Colors.black,
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 17),
+                                                overflow: TextOverflow.fade,),
+                                            ),
+                                            Text("Valid till: 30 Sep", style: TextStyle(color: Colors.grey.shade500,
+                                                fontSize: 15),),
+                                            TextButton(onPressed: (){}, child: Text("TSRTC", style: TextStyle(color: Colors.black),),
+                                              style: TextButton.styleFrom(
+                                                  backgroundColor: Colors.red.shade100
+                                              ),),
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                            //Slider Container properties
+                            options: CarouselOptions(
+                              height: 180.0,
+                              enlargeCenterPage: true,
+                              autoPlay: true,
+                              aspectRatio: 16 / 2,
+                              autoPlayCurve: Curves.fastOutSlowIn,
+                              enableInfiniteScroll: true,
+                              autoPlayAnimationDuration: Duration(milliseconds: 200),
+                              viewportFraction: 0.9,
+                            ),
+                          ),
+                        ),
+                        Visibility(
+                          visible: _isPressedc,
+                          child: CarouselSlider(
+                            items: [
+                              Container(
+                                margin: EdgeInsets.all(6.0),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(8.0),
+                                ),
+                                child: Card(
+                                  child: Container(
+                                    margin: EdgeInsets.symmetric(horizontal: 20),
+                                    child: Row(
+                                      children: [
+                                        Image.asset("images/c24.jpg",height: 80,width: 80,),
+                                        SizedBox(width: 20,),
+                                        Column(
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Container(
+                                              alignment: Alignment.centerLeft,
+                                              height: 30,
+                                              color: Colors.blueAccent,
+                                              padding: EdgeInsets.symmetric(horizontal: 10),
+                                              child: Text("RYDE", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),),
+                                            ),
+                                            Flexible(
+                                              child: Text("Get Rs 200 off....",
+                                                style: TextStyle(color: Colors.black,
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 17),
+                                                overflow: TextOverflow.fade,),
+                                            ),
+                                            Text("Valid till: 31 Dec", style: TextStyle(color: Colors.grey.shade500,
+                                                fontSize: 15),),
+                                            TextButton(onPressed: (){}, child: Text("INSTANT200", style: TextStyle(color: Colors.black),),
+                                              style: TextButton.styleFrom(
+                                                  backgroundColor: Colors.red.shade100
+                                              ),),
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              ],
+                            //Slider Container properties
+                            options: CarouselOptions(
+                              height: 180.0,
+                              enlargeCenterPage: true,
+                              autoPlay: true,
+                              aspectRatio: 16 / 2,
+                              autoPlayCurve: Curves.fastOutSlowIn,
+                              enableInfiniteScroll: true,
+                              autoPlayAnimationDuration: Duration(milliseconds: 200),
+                              viewportFraction: 0.9,
+                            ),
+                          ),
+                        ),
+                        Visibility(
+                          visible: _isPressedt,
+                          child: CarouselSlider(
+                            items: [
+                              Container(
+                                margin: EdgeInsets.all(6.0),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(8.0),
+                                ),
+                                child: Card(
+                                  child: Container(
+                                    margin: EdgeInsets.symmetric(horizontal: 20),
+                                    child: Row(
+                                      children: [
+                                        Image.asset("images/c22.jpg",height: 80,width: 80,),
+                                        SizedBox(width: 20,),
+                                        Column(
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Container(
+                                              alignment: Alignment.centerLeft,
+                                              height: 30,
+                                              color: Colors.blueAccent,
+                                              padding: EdgeInsets.symmetric(horizontal: 10),
+                                              child: Text("RAILS", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),),
+                                            ),
+                                            Flexible(
+                                              child: Text("Save upto Rs 150 on trai....",
+                                                style: TextStyle(color: Colors.black,
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 17),
+                                                overflow: TextOverflow.fade,),
+                                            ),
+                                            Text("Valid till: 30 Sep", style: TextStyle(color: Colors.grey.shade500,
+                                                fontSize: 15),),
+                                            TextButton(onPressed: (){}, child: Text("RBRAIL", style: TextStyle(color: Colors.black),),
+                                              style: TextButton.styleFrom(
+                                                  backgroundColor: Colors.red.shade100
+                                              ),),
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                margin: EdgeInsets.all(6.0),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(8.0),
+                                ),
+                                child: Card(
+                                  child: Container(
+                                    margin: EdgeInsets.symmetric(horizontal: 20),
+                                    child: Row(
+                                      children: [
+                                        Image.asset("images/c23.jpg",height: 80,width: 80,),
+                                        SizedBox(width: 20,),
+                                        Column(
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Container(
+                                              alignment: Alignment.centerLeft,
+                                              height: 30,
+                                              color: Colors.blueAccent,
+                                              padding: EdgeInsets.symmetric(horizontal: 10),
+                                              child: Text("RAILS", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),),
+                                            ),
+                                            Flexible(
+                                              child: Text("Zero Convi....",
+                                                style: TextStyle(color: Colors.black,
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 17),
+                                                overflow: TextOverflow.fade,),
+                                            ),
+                                            Text("Valid till: 30 Sep", style: TextStyle(color: Colors.grey.shade500,
+                                                fontSize: 15),),
+                                            TextButton(onPressed: (){}, child: Text("NOFEE", style: TextStyle(color: Colors.black),),
+                                              style: TextButton.styleFrom(
+                                                  backgroundColor: Colors.red.shade100
+                                              ),),
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                margin: EdgeInsets.all(6.0),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(8.0),
+                                ),
+                                child: Card(
+                                  child: Container(
+                                    margin: EdgeInsets.symmetric(horizontal: 20),
+                                    child: Row(
+                                      children: [
+                                        Image.asset("images/c22.jpg",height: 80,width: 80,),
+                                        SizedBox(width: 20,),
+                                        Column(
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Container(
+                                              alignment: Alignment.centerLeft,
+                                              height: 30,
+                                              color: Colors.blueAccent,
+                                              padding: EdgeInsets.symmetric(horizontal: 10),
+                                              child: Text("RAILS", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),),
+                                            ),
+                                            Flexible(
+                                              child: Text("Save upto Rs 80 on TRA....",
+                                                style: TextStyle(color: Colors.black,
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 17),
+                                                overflow: TextOverflow.fade,),
+                                            ),
+                                            Text("Valid till: 30 Sep", style: TextStyle(color: Colors.grey.shade500,
+                                                fontSize: 15),),
+                                            TextButton(onPressed: (){}, child: Text("SUPERB80", style: TextStyle(color: Colors.black),),
+                                              style: TextButton.styleFrom(
+                                                  backgroundColor: Colors.red.shade100
+                                              ),),
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+
+                            ],
+                            //Slider Container properties
+                            options: CarouselOptions(
+                              height: 180.0,
+                              enlargeCenterPage: true,
+                              autoPlay: true,
+                              aspectRatio: 16 / 2,
+                              autoPlayCurve: Curves.fastOutSlowIn,
+                              enableInfiniteScroll: true,
+                              autoPlayAnimationDuration: Duration(milliseconds: 200),
+                              viewportFraction: 0.9,
+                            ),
+                          ),
+                        ),
+                        SizedBox(height: 20,),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Exclusive Partner",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 22),
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: 20,),
+                        CarouselSlider(
+                          items: [
+                            //1st Image of Slider
+                            Container(
+                              margin: EdgeInsets.all(6.0),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8.0),
+                                image: DecorationImage(
+                                  image: AssetImage("images/c10.jpg"),
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+
+                            //2nd Image of Slider
+                            Container(
+                              margin: EdgeInsets.all(6.0),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8.0),
+                                image: DecorationImage(
+                                  image: AssetImage("images/c9.jpg"),
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                          ],
+
+                          //Slider Container properties
+                          options: CarouselOptions(
+                            height: 180.0,
+                            enlargeCenterPage: true,
+                            autoPlay: true,
+                            aspectRatio: 16 / 2,
+                            autoPlayCurve: Curves.fastOutSlowIn,
+                            enableInfiniteScroll: true,
+                            autoPlayAnimationDuration: Duration(milliseconds: 200),
+                            viewportFraction: 0.9,
+                          ),
+                        ),
+                        SizedBox(height: 20,),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Text(
+                              "What's New",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 22),
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: 20,),
+                        CarouselSlider(
+                          items: [
+                            //1st Image of Slider
+                            Container(
+                              margin: EdgeInsets.all(6.0),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8.0),
+                                image: DecorationImage(
+                                  image: AssetImage("images/c11.jpg"),
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+
+                            //2nd Image of Slider
+                            Container(
+                              margin: EdgeInsets.all(6.0),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8.0),
+                                image: DecorationImage(
+                                  image: AssetImage("images/c12.jpg"),
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+
+                            //3rd Image of Slider
+                            Container(
+                              margin: EdgeInsets.all(6.0),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8.0),
+                                image: DecorationImage(
+                                  image: AssetImage("images/c13.jpg"),
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+
+                            //4th Image of Slider
+                            Container(
+                              margin: EdgeInsets.all(6.0),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8.0),
+                                image: DecorationImage(
+                                  image: AssetImage("images/c14.jpg"),
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+
+                            //5th Image of Slider
+                            Container(
+                              margin: EdgeInsets.all(6.0),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8.0),
+                                image: DecorationImage(
+                                  image: AssetImage("images/c15.jpg"),
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                          ],
+                          //Slider Container properties
+                          options: CarouselOptions(
+                            height: 180.0,
+                            enlargeCenterPage: true,
+                            autoPlay: true,
+                            aspectRatio: 16 / 2,
+                            autoPlayCurve: Curves.fastOutSlowIn,
+                            enableInfiniteScroll: true,
+                            autoPlayAnimationDuration: Duration(milliseconds: 200),
+                            viewportFraction: 0.9,
+                          ),
+                        ),
+                        SizedBox(height: 20,),
                       ],
                     )
                   ),
@@ -719,11 +1654,12 @@ class homeState extends State<home> {
                     width: double.infinity,
                     color: Color.fromARGB(17, 64, 79, 245),
                     child: Container(
+                      padding: EdgeInsets.all(20),
                       child: Column(
                         children: [
                           Row(
                             children: [
-                              Flexible(child: Image.asset("images/IRCTC.jpg")),
+                              Flexible(child: Image.asset("images/IRCTC.png",height: 80,width: 80,)),
                               Column(
                                 children: [
                                   Container(
