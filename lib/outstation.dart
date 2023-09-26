@@ -1,19 +1,18 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:red_bus_clone/cabbook.dart';
+import 'package:red_bus_clone/busticket.dart';
 import 'package:red_bus_clone/search.dart';
+import 'package:red_bus_clone/trainticket.dart';
 import 'dart:math'as math;
-
-import 'busticket.dart';
-class TrainTicket extends StatefulWidget {
-  const TrainTicket({Key? key}) : super(key: key);
+class Outstation extends StatefulWidget {
+  const Outstation({Key? key}) : super(key: key);
 
   @override
-  State<TrainTicket> createState() => _TrainTicketState();
+  State<Outstation> createState() => _OutstationState();
 }
 
-class _TrainTicketState extends State<TrainTicket> {
+class _OutstationState extends State<Outstation> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -23,56 +22,48 @@ class _TrainTicketState extends State<TrainTicket> {
             scrollDirection: Axis.vertical,
             child: Column(
               children: [
-                Container(
-                  color: Colors.white,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Flexible(
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Flexible(
+                      child:
+                      TextButton(
+                        onPressed: (){
+                          Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => BusTicket()));
+                        },
                         child:
-                        TextButton(
-                          onPressed: (){
-                            Navigator.pushReplacement(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => BusTicket()));
-                          },
-                          child:
-                          Image.asset('images/image7.jpg',
-                            width: 120,
-                          ),
+                        Image.asset('images/image7.jpg',
+                          width: 120,
                         ),
                       ),
-                      Flexible(
-                        child:
-                        TextButton(
-                          onPressed: (){
-                            Navigator.pushReplacement(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => cabbook()));
-                          },
-                          child: Image.asset('images/image8.jpg',
-                            width: 180,
-                          ),
+                    ),
+                    Flexible(
+                      child:
+                      TextButton(
+                        onPressed: (){},
+                        child: Image.asset('images/image8.jpg',
+                          width: 180,
                         ),
                       ),
-                      Flexible(
-                        child:
-                        TextButton(
-                          onPressed: (){
-                            Navigator.pushReplacement(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => TrainTicket()));
-                          },
-                          child: Image.asset('images/image9.jpg',
-                            width: 110,
-                          ),
+                    ),
+                    Flexible(
+                      child:
+                      TextButton(
+                        onPressed: (){
+                          Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => TrainTicket()));
+                        },
+                        child: Image.asset('images/image9.jpg',
+                          width: 110,
                         ),
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
                 Divider(
                   color: Colors.grey.shade400,
@@ -111,12 +102,12 @@ class _TrainTicketState extends State<TrainTicket> {
                                     },
                                     child: Row(
                                       children: [
-                                        Icon(Icons.directions_bus_outlined),
+                                        Icon(Icons.car_rental),
                                         SizedBox(
                                           width: 20,
                                         ),
                                         Text(
-                                          "From",
+                                          "Pickup Loaction",
                                           style:
                                           TextStyle(color: Colors.grey.shade600),
                                         )
@@ -131,19 +122,19 @@ class _TrainTicketState extends State<TrainTicket> {
                                   padding: EdgeInsets.all(8),
                                   child: InkWell(
                                     onTap: () {
-                                      Navigator.push(
+                                      Navigator.pushReplacement(
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) => Searchfeild()));
                                     },
                                     child: Row(
                                       children: [
-                                        Icon(Icons.directions_bus_outlined),
+                                        Icon(Icons.car_rental_outlined),
                                         SizedBox(
                                           width: 20,
                                         ),
                                         Text(
-                                          "To",
+                                          "Destination loaction",
                                           style:
                                           TextStyle(color: Colors.grey.shade600),
                                         )
@@ -257,6 +248,31 @@ class _TrainTicketState extends State<TrainTicket> {
                                   ),
                                 ),
                                 Divider(color: Colors.grey.shade500,),
+                                Container(
+                                  padding: EdgeInsets.all(8),
+                                  child: InkWell(
+                                    onTap: () {
+                                      Navigator.pushReplacement(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) => Searchfeild()));
+                                    },
+                                    child: Row(
+                                      children: [
+                                        Icon(Icons.check_box_outline_blank),
+                                        SizedBox(
+                                          width: 20,
+                                        ),
+                                        Text(
+                                          "I need a round Trip",
+                                          style:
+                                          TextStyle(color: Colors.grey.shade600),
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                Divider(color: Colors.grey.shade500,),
                                 SizedBox(height: 10,),
                                 Container(
                                   height: 45,
@@ -277,9 +293,6 @@ class _TrainTicketState extends State<TrainTicket> {
                                             borderRadius: BorderRadius.circular(10.0),
                                           ))),
                                 ),
-                                SizedBox(height: 10,),
-                                Text("IRCTC Autherised Partner",style: TextStyle(color: Colors.blue.shade900,fontWeight: FontWeight.bold
-                                ),),
                                 SizedBox(height: 20,),
                               ],
                             ),
@@ -312,15 +325,16 @@ class _TrainTicketState extends State<TrainTicket> {
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 20,
-                      ),
+                      SizedBox(height: 20,),
+                      Container(
+                        margin: EdgeInsets.only(right: 20),
+                        child:Image.asset('images/cabimg1.jpeg'),),
                       SizedBox(height: 20,),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Text(
-                            "Exclusive Partner",
+                            "Offers",
                             style: TextStyle(
                                 color: Colors.black,
                                 fontWeight: FontWeight.bold,
@@ -333,11 +347,11 @@ class _TrainTicketState extends State<TrainTicket> {
                         items: [
                           //1st Image of Slider
                           Container(
-                            margin: EdgeInsets.all(6.0),
+                            margin: EdgeInsets.only(right: 20.0),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8.0),
                               image: DecorationImage(
-                                image: AssetImage("images/c10.jpg"),
+                                image: AssetImage("images/cabimg2.jpeg"),
                                 fit: BoxFit.cover,
                               ),
                             ),
@@ -345,11 +359,21 @@ class _TrainTicketState extends State<TrainTicket> {
 
                           //2nd Image of Slider
                           Container(
-                            margin: EdgeInsets.all(6.0),
+                            margin: EdgeInsets.only(right: 20.0),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8.0),
                               image: DecorationImage(
-                                image: AssetImage("images/c9.jpg"),
+                                image: AssetImage("images/cabimg3.jpeg"),
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+                          Container(
+                            margin: EdgeInsets.only(right: 20.0),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8.0),
+                              image: DecorationImage(
+                                image: AssetImage("images/cabimg4.jpeg"),
                                 fit: BoxFit.cover,
                               ),
                             ),
@@ -373,6 +397,32 @@ class _TrainTicketState extends State<TrainTicket> {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Text(
+                            "Book in 3 Steps",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 22),
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 20,),
+                      Container(
+                        margin: EdgeInsets.only(right: 20.0),
+                        child: Image.asset('images/cabimg7.jpeg'),
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(right: 20.0),
+                        child: Image.asset('images/cabimg6.jpeg'),
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(right: 20.0),
+                        child: Image.asset('images/cabimg5.jpeg'),
+                      ),
+                      SizedBox(height: 20,),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Text(
                             "What's New",
                             style: TextStyle(
                                 color: Colors.black,
@@ -386,7 +436,7 @@ class _TrainTicketState extends State<TrainTicket> {
                         items: [
                           //1st Image of Slider
                           Container(
-                            margin: EdgeInsets.all(6.0),
+                            margin: EdgeInsets.only(right: 20.0),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8.0),
                               image: DecorationImage(
@@ -398,7 +448,7 @@ class _TrainTicketState extends State<TrainTicket> {
 
                           //2nd Image of Slider
                           Container(
-                            margin: EdgeInsets.all(6.0),
+                            margin: EdgeInsets.only(right: 20.0),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8.0),
                               image: DecorationImage(
@@ -410,7 +460,7 @@ class _TrainTicketState extends State<TrainTicket> {
 
                           //3rd Image of Slider
                           Container(
-                            margin: EdgeInsets.all(6.0),
+                            margin: EdgeInsets.only(right: 20.0),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8.0),
                               image: DecorationImage(
@@ -422,7 +472,7 @@ class _TrainTicketState extends State<TrainTicket> {
 
                           //4th Image of Slider
                           Container(
-                            margin: EdgeInsets.all(6.0),
+                            margin: EdgeInsets.only(right: 20.0),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8.0),
                               image: DecorationImage(
@@ -434,7 +484,7 @@ class _TrainTicketState extends State<TrainTicket> {
 
                           //5th Image of Slider
                           Container(
-                            margin: EdgeInsets.all(6.0),
+                            margin: EdgeInsets.only(right: 20.0),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8.0),
                               image: DecorationImage(

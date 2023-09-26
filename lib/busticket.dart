@@ -24,53 +24,56 @@ class _BusTicketState extends State<BusTicket> {
               scrollDirection: Axis.vertical,
               child: Column(
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Flexible(
-                        child:
-                        TextButton(
-                          onPressed: (){
-                            Navigator.pushReplacement(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => BusTicket()));
-                          },
+                  Container(
+                    color: Colors.white,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Flexible(
                           child:
-                          Image.asset('images/image7.jpg',
-                            width: 120,
+                          TextButton(
+                            onPressed: (){
+                              Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => BusTicket()));
+                            },
+                            child:
+                            Image.asset('images/image7.jpg',
+                              width: 120,
+                            ),
                           ),
                         ),
-                      ),
-                      Flexible(
-                        child:
-                        TextButton(
-                          onPressed: (){
-                            Navigator.pushReplacement(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => cabbook()));
-                          },
-                          child: Image.asset('images/image8.jpg',
-                            width: 180,
+                        Flexible(
+                          child:
+                          TextButton(
+                            onPressed: (){
+                              Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => cabbook()));
+                            },
+                            child: Image.asset('images/image8.jpg',
+                              width: 180,
+                            ),
                           ),
                         ),
-                      ),
-                      Flexible(
-                        child:
-                        TextButton(
-                          onPressed: (){
-                            Navigator.pushReplacement(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => TrainTicket()));
-                          },
-                          child: Image.asset('images/image9.jpg',
-                            width: 110,
+                        Flexible(
+                          child:
+                          TextButton(
+                            onPressed: (){
+                              Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => TrainTicket()));
+                            },
+                            child: Image.asset('images/image9.jpg',
+                              width: 110,
+                            ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                   Divider(
                     color: Colors.grey.shade400,
