@@ -29,7 +29,7 @@ class _TrainTicketState extends State<TrainTicket> {
                       child:
                       TextButton(
                         onPressed: (){
-                          Navigator.push(
+                          Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
                                   builder: (context) => BusTicket()));
@@ -53,7 +53,7 @@ class _TrainTicketState extends State<TrainTicket> {
                       child:
                       TextButton(
                         onPressed: (){
-                          Navigator.push(
+                          Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
                                   builder: (context) => TrainTicket()));

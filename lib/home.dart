@@ -37,7 +37,7 @@ class homeState extends State<home> {
                           child:
                           TextButton(
                             onPressed: (){
-                              Navigator.push(
+                              Navigator.pushReplacement(
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) => BusTicket()));
@@ -61,7 +61,7 @@ class homeState extends State<home> {
                           child:
                           TextButton(
                             onPressed: (){
-                              Navigator.push(
+                              Navigator.pushReplacement(
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) => TrainTicket()));
@@ -769,7 +769,7 @@ class homeState extends State<home> {
                                               child: Text("BUS", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),),
                                             ),
                                             Flexible(
-                                              child: Text("10% instant discount....",
+                                              child: Text("10% instant disc....",
                                                 style: TextStyle(color: Colors.black,
                                                     fontWeight: FontWeight.bold,
                                                     fontSize: 17),
@@ -812,7 +812,7 @@ class homeState extends State<home> {
                                               child: Text("BUS", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),),
                                             ),
                                             Flexible(
-                                              child: Text("Save upto Rs 250 on bus....",
+                                              child: Text("Save upto Rs 250....",
                                                 style: TextStyle(color: Colors.black,
                                                     fontWeight: FontWeight.bold,
                                                     fontSize: 17),
@@ -855,7 +855,7 @@ class homeState extends State<home> {
                                               child: Text("RAILS", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),),
                                             ),
                                             Flexible(
-                                              child: Text("Save upto Rs 150 on trai....",
+                                              child: Text("Save upto Rs 150....",
                                                 style: TextStyle(color: Colors.black,
                                                     fontWeight: FontWeight.bold,
                                                     fontSize: 17),

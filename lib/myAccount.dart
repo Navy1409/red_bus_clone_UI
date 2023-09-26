@@ -48,7 +48,7 @@ class accState extends State<acc> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      'Male',
+                                      'Navodita',
                                       style: TextStyle(fontSize: 18,
                                         color: Colors.grey.shade600,),
                                     ),
