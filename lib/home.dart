@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:red_bus_clone/busticket.dart';
+import 'package:red_bus_clone/cabbook.dart';
 import 'dart:math'as math;
 
 import 'search.dart';
@@ -51,7 +52,12 @@ class homeState extends State<home> {
                       Flexible(
                           child:
                           TextButton(
-                            onPressed: (){},
+                            onPressed: (){
+                              Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => cabbook()));
+                            },
                             child: Image.asset('images/image8.jpg',
                               width: 180,
                             ),

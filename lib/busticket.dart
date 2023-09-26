@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:red_bus_clone/cabbook.dart';
 import 'dart:math' as math;
 
 import 'package:red_bus_clone/search.dart';
@@ -44,7 +45,12 @@ class _BusTicketState extends State<BusTicket> {
                       Flexible(
                         child:
                         TextButton(
-                          onPressed: (){},
+                          onPressed: (){
+                            Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => cabbook()));
+                          },
                           child: Image.asset('images/image8.jpg',
                             width: 180,
                           ),
