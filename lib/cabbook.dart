@@ -18,6 +18,7 @@ class _cabbookState extends State<cabbook> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: SafeArea(child: Scaffold(
         body:
         SingleChildScrollView(
@@ -80,6 +81,7 @@ class _cabbookState extends State<cabbook> {
                   color: Colors.grey.shade400,
                   height: 2,
                 ),
+                SizedBox(height: 15,),
                 Container(
                   alignment: Alignment.center,
                   child: ToggleButtons(
@@ -118,6 +120,7 @@ class _cabbookState extends State<cabbook> {
                     },
                   ),
                 ),
+                SizedBox(height: 15,),
                 Visibility(
                     visible: _selections[0],
                     child: Column(
@@ -1015,7 +1018,7 @@ class _cabbookState extends State<cabbook> {
                     ),
                 ),
                 Visibility(
-                  visible: _selections[1],
+                  visible: _selections[2],
                   child: Column(
                     children: [
                       Container(
