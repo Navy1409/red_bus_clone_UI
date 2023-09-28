@@ -133,7 +133,7 @@ class _cabbookState extends State<cabbook> {
                                 children: [
                                   Container(
                                     margin: EdgeInsets.only(
-                                        top: 10, left: 5, right: 25, bottom: 10),
+                                        top: 10, left: 5, right: 25, bottom: 15),
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.only(
                                         topRight: Radius.circular(10),
